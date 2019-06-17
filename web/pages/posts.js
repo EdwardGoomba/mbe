@@ -1,23 +1,48 @@
 import Link from 'next/link'
 import client from '../client'
+import styled from 'styled-components'
+
+// styles
+const Entries = styled.div`
+  padding: 1rem;
+`
+
+const Title = styled.h1`
+  font-size: 2rem;
+  color: #242424;
+`
+const Post = styled.li`
+  list-style: none;
+  a {
+    text-decoration: none;
+    color: #107c91;
+    font-size: 1.4rem;
+    font-family: 'Lato  Medium', sans-serif;
+  }
+`
 
 function Posts(props) {
   const { posts = [] } = props
+  console.log('Post Data: ', props)
   return (
-    <div>
-      <h1>Hi, I am Edward Danilyuk.</h1>
+    <Entries>
+      <Link prefetch href='/'>
+        <Title>Entries by Edward Danilyuk</Title>
+      </Link>
       {posts.map(
-        ({ _id, title = '', slug = '', _updatedAt = '' }) =>
+        ({ _id, title = '', slug = '', _updatedAt = '', overview = '' }) =>
           slug && (
-            <li key={_id}>
+            <Post key={_id}>
               <Link prefetch href={`/p/${slug.current}`}>
-                <a>{title}</a>
+                <>
+                  <a>{title}</a>
+                  <p>{overview}</p>
+                </>
               </Link>{' '}
-              ({new Date(_updatedAt).toDateString()})
-              </li>
+            </Post>
           )
       )}
-    </div>
+    </Entries>
   )
 }
 
