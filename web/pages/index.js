@@ -5,24 +5,14 @@ function Index(props) {
   const { posts = [] } = props
   return (
     <div>
-      <h1>Hi, I am Edward Danilyuk.</h1>
-      {posts.map(
-        ({ _id, title = '', slug = '', _updatedAt = '' }) =>
-          slug && (
-            <li key={_id}>
-              <Link prefetch href={`/p/${slug.current}`}>
-                <a>{title}</a>
-              </Link>{' '}
-              ({new Date(_updatedAt).toDateString()})
-              </li>
-          )
-      )}
+      <>
+        <h1>Hi, I am Edward Danilyuk.</h1>
+        <Link prefetch href='/posts'>
+          <a>Entries</a>
+        </Link>
+      </>
     </div>
   )
 }
-
-Index.getInitialProps = async () => ({
-  posts: await client.fetch(`*[_type == "post"]`)
-})
 
 export default Index

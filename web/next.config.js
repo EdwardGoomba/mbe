@@ -8,6 +8,7 @@ module.exports = {
         data.reduce(
           (acc, slug) => ({
             '/': { page: '/' },
+            '/posts': { page: '/posts' },
             ...acc,
             [`/p/${slug}`]: { page: '/post', query: { slug } }
           }),
