@@ -19,14 +19,15 @@
 	ul {
 		margin: 0 0 1em 0;
 		line-height: 1.5;
+    list-style: none;
 	}
 </style>
 
 <svelte:head>
-	<title>Blog</title>
+	<title>Entries</title>
 </svelte:head>
 
-<h1>Recent posts</h1>
+<h1>Entries by Edward Danilyuk</h1>
 
 <ul>
 	{#each posts as post}
