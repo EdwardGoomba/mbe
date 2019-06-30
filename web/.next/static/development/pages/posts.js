@@ -20306,10 +20306,10 @@ function Posts(props) {
 
     return slug && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(Post, {
       key: _id
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", {
       prefetch: true,
       href: "/p/".concat(slug.current)
-    }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_3___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("a", null, title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, overview))), ' ');
+    }, title), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("p", null, overview))));
   }));
 }
 
@@ -20342,7 +20342,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fposts&absolutePagePath=%2FUsers%2Fedward%2Fdev%2Fmbe%2Fweb%2Fpages%2Fposts.js ***!
   \****************************************************************************************************************************/
@@ -20365,5 +20365,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=posts.js.map

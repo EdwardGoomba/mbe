@@ -23,6 +23,10 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/post": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
     "/posts": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"

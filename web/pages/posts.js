@@ -33,12 +33,12 @@ function Posts(props) {
         ({ _id, title = '', slug = '', _updatedAt = '', overview = '' }) =>
           slug && (
             <Post key={_id}>
-              <Link prefetch href={`/p/${slug.current}`}>
+              <Link>
                 <>
-                  <a>{title}</a>
+                  <a prefetch href={`/p/${slug.current}`}>{title}</a>
                   <p>{overview}</p>
                 </>
-              </Link>{' '}
+              </Link>
             </Post>
           )
       )}
