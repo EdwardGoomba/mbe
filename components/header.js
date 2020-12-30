@@ -3,14 +3,14 @@ import styled from 'styled-components'
 
 // styles
 const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `
 
 const Logo = styled.div`
   font-size: 1.5rem;
   padding: 1rem;
+
   a {
     text-decoration: none;
     color: #242424;
@@ -18,8 +18,10 @@ const Logo = styled.div`
 `
 
 const Menu = styled.div`
+  justify-self: end;
   font-size: 1.5rem;
   padding: 1rem;
+
   a {
     text-decoration: none;
     color: #107c91;

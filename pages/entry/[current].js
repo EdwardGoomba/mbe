@@ -5,7 +5,14 @@ import Header from '../../components/header'
 import sanity from "../../lib/sanity";
 
 // styles
-const Container = styled.div``
+const Container = styled.div`
+  display: grid;
+  margin: 1rem;
+`
+
+const Body = styled.article`
+  padding: 1rem;
+`
 
 const entriesQuery = `*[_type == "post"] { _id, slug { current } }`;
 
@@ -29,7 +36,7 @@ const Entry = ({ entry }) => {
   return (
     <Container>
       <Header />
-      <article>
+      <Body>
         <h1>{title}</h1>
         {categories && (
           <ul>
@@ -42,7 +49,7 @@ const Entry = ({ entry }) => {
           imageOptions={{ w: 320, h: 240, fit: 'max' }}
           {...sanity.config()}
         />
-      </article>
+      </Body>
     </Container>
   )
 }

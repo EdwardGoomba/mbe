@@ -5,23 +5,29 @@ import Header from '../components/header'
 import sanity from "../lib/sanity";
 
 // styles
-const Container = styled.div``
+const Container = styled.div`
+  display: grid;
+  margin: 1rem;
+`
 
 const Body = styled.div`
   padding: 1rem;
+
+  h1 {
+    font-size: 3rem;
+    color: #242424;
+    margin-bottom: 3rem;
+  }
 `
 
-const Title = styled.h1`
-  font-size: 2rem;
-  color: #242424;
-`
-const Post = styled.li`
-  list-style: none;
+const Post = styled.div`
+  margin-bottom: 3rem;
+
   a {
+    font-size: 1.8rem;
+    font-family: 'Lato  Medium', sans-serif;
     text-decoration: none;
     color: #107c91;
-    font-size: 1.4rem;
-    font-family: 'Lato  Medium', sans-serif;
   }
 `
 
@@ -29,7 +35,7 @@ const Entries = ({ entries }) => (
   <Container>
     <Header />
     <Body>
-      <Title>Entries</Title>
+      <h1>Entries</h1>
       {entries.map(entry => {
         const { _id, title, slug: { current }, overview } = entry
         return (
