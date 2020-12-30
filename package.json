@@ -4,23 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "export": "npm run build && next export"
+    "start": "next start",
+    "export": "yarn build && next export"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "EdwardGoomba",
+  "license": "MIT",
   "dependencies": {
-    "@sanity/block-content-to-react": "^2.0.6",
-    "@sanity/client": "^0.140.32",
-    "@sanity/image-url": "^0.140.12",
-    "express": "^4.17.1",
-    "groq": "^0.140.0",
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.3.1"
+    "@sanity/block-content-to-react": "^2.0.7",
+    "@sanity/client": "^2.1.0",
+    "next": "^10.0.4",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.12.0"
   }
 }

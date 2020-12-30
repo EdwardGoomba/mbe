@@ -1,30 +1,9 @@
-import Link from 'next/link'
 import styled from 'styled-components'
+// components
+import Header from '../components/header'
 
 // styles
-const Header = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-
-const Logo = styled.div`
-  font-size: 1.5rem;
-  padding: 1rem;
-  a {
-    text-decoration: none;
-    color: #242424;
-  }
-`
-
-const Menu = styled.div`
-  font-size: 1.5rem;
-  padding: 1rem;
-  a {
-    text-decoration: none;
-    color: #107c91;
-  }
-`
+const Container = styled.div``
 
 const IntroSection = styled.div`
   max-width: 40%;
@@ -48,7 +27,7 @@ const NewsletterSection = styled.div`
 
 const Newsletter = styled.h2`
   font-size: 2.5rem;
-  color: #107c91
+  color: #107c91;
 `
 
 const NewsletterDetails = styled.p`
@@ -56,22 +35,10 @@ const NewsletterDetails = styled.p`
   font-size: 1.5rem;
 `
 
-function Index(props) {
-  const { posts = [] } = props
+const Index = () => {
   return (
-    <>
-      <Header>
-        <Logo>
-          <Link prefetch href='/'>
-            <a>Made by Edward</a>
-          </Link>
-        </Logo>
-        <Menu>
-          <Link prefetch href='/posts'>
-            <a>Entries</a>
-          </Link>
-        </Menu>
-      </Header>
+    <Container>
+      <Header />
       <IntroSection>
         <Intro>Hi, I am Edward Danilyuk.</Intro>
         <Details>I am a designer and developer who is always building things. I believe that sharing knowledge is the core of humanity. I believe that I have a positive, unique experience I can share with others.</Details>
@@ -84,7 +51,7 @@ function Index(props) {
   If you like thoughts that make you stop and think - this is probably also for you.</NewsletterDetails>
         <p>Signup Coming Soon</p>
       </NewsletterSection>
-    </>
+    </Container>
   )
 }
 
